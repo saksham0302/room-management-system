@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".meal.StandardMessTwoMeals">
+
+    <RadioGroup
+        android:id="@+id/standardTwoMeals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/standardTwoMeals1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="4dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@color/radio_flat_text_selector"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Hostel Mess" />
+
+        <RadioButton
+            android:id="@+id/standardTwoMeals3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="4dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:background="@drawable/radio_flat_selector"
+            android:button="@android:color/transparent"
+            android:textColor="@color/radio_flat_text_selector"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Centralized Mess-2" />
+    </RadioGroup>
+
+</FrameLayout>
