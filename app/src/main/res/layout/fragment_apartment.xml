@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".room.Apartment">
 
     <RadioGroup
@@ -18,7 +19,7 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/room1"
+            android:id="@+id/apartments1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -34,7 +35,7 @@
             android:text="Student Apartment A" />
 
         <RadioButton
-            android:id="@+id/room2"
+            android:id="@+id/apartments2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -50,4 +51,9 @@
             android:text="Student Apartment B" />
     </RadioGroup>
 
-</FrameLayout>
+    <FrameLayout
+        android:id="@+id/apartmentRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

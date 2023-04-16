@@ -19,7 +19,7 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/room1"
+            android:id="@+id/standardAC1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             android:text="BH1" />
 
         <RadioButton
-            android:id="@+id/room2"
+            android:id="@+id/standardAC2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -51,7 +51,7 @@
             android:text="BH2" />
 
         <RadioButton
-            android:id="@+id/radio3"
+            android:id="@+id/standardAC3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -67,7 +67,7 @@
             android:text="BH3" />
 
         <RadioButton
-            android:id="@+id/radio4"
+            android:id="@+id/standardAC4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -83,7 +83,7 @@
             android:text="BH4" />
 
         <RadioButton
-            android:id="@+id/radio5"
+            android:id="@+id/standardAC5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -98,5 +98,10 @@
             android:textStyle="bold"
             android:text="BH5" />
     </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/standardACRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

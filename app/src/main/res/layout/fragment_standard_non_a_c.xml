@@ -19,7 +19,7 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/room1"
+            android:id="@+id/standardNonAC1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             android:text="BH6" />
 
         <RadioButton
-            android:id="@+id/room2"
+            android:id="@+id/standardNonAC2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -51,7 +51,7 @@
             android:text="BH7" />
 
         <RadioButton
-            android:id="@+id/radio3"
+            android:id="@+id/standardNonAC3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -67,5 +67,10 @@
             android:text="BH8" />
 
     </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/standardNonACRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

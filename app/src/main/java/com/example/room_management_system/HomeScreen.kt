@@ -22,69 +22,70 @@ class HomeScreen : AppCompatActivity() {
         selectMeal()
     }
 
-    lateinit var room: RadioGroup
-    lateinit var room1: RadioButton
-    lateinit var room2: RadioButton
-    lateinit var room3: RadioButton
+    lateinit var roomType: RadioGroup
+    lateinit var roomType1: RadioButton
+    lateinit var roomType2: RadioButton
+    lateinit var roomType3: RadioButton
 
     fun selectRoom() {
-        room = findViewById(R.id.room)
-        room1 = findViewById(R.id.room1)
-        room2 = findViewById(R.id.room2)
-        room3 = findViewById(R.id.room3)
+        roomType = findViewById(R.id.roomType)
+        roomType1 = findViewById(R.id.roomType1)
+        roomType2 = findViewById(R.id.roomType2)
+        roomType3 = findViewById(R.id.roomType3)
 
-        val mealFragmentManager: FragmentManager = supportFragmentManager
-        var roomFragmentTransaction = mealFragmentManager.beginTransaction()
+        val roomFragmentManager: FragmentManager = supportFragmentManager
+        var roomFragmentTransaction = roomFragmentManager.beginTransaction()
         roomFragmentTransaction.commit()
 
-        room.setOnCheckedChangeListener (RadioGroup.OnCheckedChangeListener { radioGroup, checkedId ->
-            roomFragmentTransaction = mealFragmentManager.beginTransaction()
+        roomType.setOnCheckedChangeListener (RadioGroup.OnCheckedChangeListener { radioGroup, checkedId ->
+            roomFragmentTransaction = roomFragmentManager.beginTransaction()
             when (checkedId) {
-                R.id.room1 -> {
-                    roomFragmentTransaction.replace(R.id.roomFrameLayout, Apartment())
+                R.id.roomType1 -> {
+                    roomFragmentTransaction.replace(R.id.roomTypeFrameLayout, Apartment())
                 }
-                R.id.room2 -> {
-                    roomFragmentTransaction.replace(R.id.roomFrameLayout, StandardAC())
+                R.id.roomType2 -> {
+                    roomFragmentTransaction.replace(R.id.roomTypeFrameLayout, StandardAC())
                 }
-                R.id.room3 -> {
-                    roomFragmentTransaction.replace(R.id.roomFrameLayout, StandardNonAC())
+                R.id.roomType3 -> {
+                    roomFragmentTransaction.replace(R.id.roomTypeFrameLayout, StandardNonAC())
                 }
             }
             roomFragmentTransaction.commit()
         })
-        var i = mealFragmentManager.backStackEntryCount
+        var i = roomFragmentManager.backStackEntryCount
         while (i > 0) {
-            mealFragmentManager.popBackStack()
+            roomFragmentManager.popBackStack()
             i--
         }
     }
 
-    lateinit var meal: RadioGroup
-    lateinit var meal1: RadioButton
-    lateinit var meal2: RadioButton
-    lateinit var meal3: RadioButton
+
+    lateinit var mealType: RadioGroup
+    lateinit var mealType1: RadioButton
+    lateinit var mealType2: RadioButton
+    lateinit var mealType3: RadioButton
 
     fun selectMeal() {
-        meal = findViewById(R.id.meal)
-        meal1 = findViewById(R.id.meal1)
-        meal2 = findViewById(R.id.meal2)
-        meal3 = findViewById(R.id.meal3)
+        mealType = findViewById(R.id.mealType)
+        mealType1 = findViewById(R.id.mealType1)
+        mealType2 = findViewById(R.id.mealType2)
+        mealType3 = findViewById(R.id.mealType3)
 
         val mealFragmentManager: FragmentManager = supportFragmentManager
         var mealFragmentTransaction = mealFragmentManager.beginTransaction()
         mealFragmentTransaction.commit()
 
-        meal.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { radioGroup, checkedId ->
+        mealType.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { radioGroup, checkedId ->
             mealFragmentTransaction = mealFragmentManager.beginTransaction()
             when (checkedId) {
-                R.id.meal1 -> {
-                    mealFragmentTransaction.replace(R.id.mealFrameLayout, Alacarte())
+                R.id.mealType1 -> {
+                    mealFragmentTransaction.replace(R.id.mealTypeFrameLayout, Alacarte())
                 }
-                R.id.meal2 -> {
-                    mealFragmentTransaction.replace(R.id.mealFrameLayout, StandardMessFourMeals())
+                R.id.mealType2 -> {
+                    mealFragmentTransaction.replace(R.id.mealTypeFrameLayout, StandardMessFourMeals())
                 }
-                R.id.meal3 -> {
-                    mealFragmentTransaction.replace(R.id.mealFrameLayout, StandardMessTwoMeals())
+                R.id.mealType3 -> {
+                    mealFragmentTransaction.replace(R.id.mealTypeFrameLayout, StandardMessTwoMeals())
                 }
             }
             mealFragmentTransaction.commit()

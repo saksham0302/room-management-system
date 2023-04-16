@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv1"
@@ -13,7 +17,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="start"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="12dp"
         android:textSize="30sp"
         android:textColor="@color/black"
@@ -22,19 +26,19 @@
 
     <!--Room Radio Group -->
     <RadioGroup
-        android:id="@+id/room"
+        android:id="@+id/roomType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/room1"
+            android:id="@+id/roomType1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,7 +51,7 @@
             android:text="@string/apartment" />
 
         <RadioButton
-            android:id="@+id/room2"
+            android:id="@+id/roomType2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,7 +64,7 @@
             android:text="@string/standardACRooms" />
 
         <RadioButton
-            android:id="@+id/room3"
+            android:id="@+id/roomType3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -73,10 +77,9 @@
             android:text="@string/standardNonACRooms" />
     </RadioGroup>
     <FrameLayout
-        android:id="@+id/roomFrameLayout"
+        android:id="@+id/roomTypeFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 
     <TextView
         android:id="@+id/tv2"
@@ -84,7 +87,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="start"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="12dp"
         android:textSize="30sp"
         android:textColor="@color/black"
@@ -93,19 +96,19 @@
 
     <!--Meal Radio Group -->
     <RadioGroup
-        android:id="@+id/meal"
+        android:id="@+id/mealType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/meal1"
+            android:id="@+id/mealType1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -118,7 +121,7 @@
             android:text="@string/alacarte" />
 
         <RadioButton
-            android:id="@+id/meal2"
+            android:id="@+id/mealType2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -131,7 +134,7 @@
             android:text="@string/standardMessFourMeals" />
 
         <RadioButton
-            android:id="@+id/meal3"
+            android:id="@+id/mealType3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -143,9 +146,12 @@
             android:textColor="@color/radio_flat_text_selector"
             android:text="@string/standardMessTwoMeals" />
     </RadioGroup>
+
     <FrameLayout
-        android:id="@+id/mealFrameLayout"
+        android:id="@+id/mealTypeFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
