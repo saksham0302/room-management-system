@@ -13,7 +13,10 @@ import com.example.room_management_system.room.Room
 
 class StandardMessFourMeals : Fragment() {
 
+    // Variable to access the layout widgets in fragment
     lateinit var v: View
+
+    // Variables to access the widgets for choosing the mess
     lateinit var standardFourMeals: RadioGroup
     lateinit var standardFourMeals1: RadioButton
     lateinit var standardFourMeals2: RadioButton
@@ -23,18 +26,27 @@ class StandardMessFourMeals : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        // Assigning inflater to the view variable
         v = inflater.inflate(R.layout.fragment_standard_mess_four_meals, container, false)
+
+        // Referring the widgets
         standardFourMeals = v.findViewById(R.id.standardFourMeals)
         standardFourMeals1 = v.findViewById(R.id.standardFourMeals1)
         standardFourMeals2 = v.findViewById(R.id.standardFourMeals2)
         standardFourMeals3 = v.findViewById(R.id.standardFourMeals3)
 
+        // Fragment Manager to call the fragments
         val mealsFragmentManager: FragmentManager = childFragmentManager
         var mealsFragmentTransaction = mealsFragmentManager.beginTransaction()
         mealsFragmentTransaction.commit()
 
+        // Perform action after a radio button is clicked
         standardFourMeals.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
+
             mealsFragmentTransaction = mealsFragmentManager.beginTransaction()
+
+            // Check the value of radio button clicked and later redirect to the decided fragment
             when(checkedId) {
                 R.id.standardFourMeals1 -> {
                     mealsFragmentTransaction.replace(R.id.messFourMeals, Meal())
@@ -46,13 +58,18 @@ class StandardMessFourMeals : Fragment() {
                     mealsFragmentTransaction.replace(R.id.messFourMeals, Meal())
                 }
             }
+
             mealsFragmentTransaction.commit()
         })
+
         var i = mealsFragmentManager.backStackEntryCount
+        // Empty the stack of fragment manager
         while (i > 0) {
             mealsFragmentManager.popBackStack()
             i--
         }
+
+        // Inflate the layout for this fragment
         return v
     }
 }

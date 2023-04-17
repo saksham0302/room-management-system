@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeScreen">
+    tools:context=".RoomReservation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:gravity="center_horizontal"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="Meal Options"
             android:textColor="@color/black"
@@ -102,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:gravity="center_horizontal"
@@ -159,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="Other Facilities"
             android:textColor="@color/black"
@@ -169,14 +169,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
             android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/laundry"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
@@ -191,7 +191,6 @@
                 android:id="@+id/gym"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="12dp"
                 android:layout_weight="1"

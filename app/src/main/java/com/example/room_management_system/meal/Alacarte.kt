@@ -13,7 +13,10 @@ import com.example.room_management_system.room.Room
 
 class Alacarte : Fragment() {
 
+    // Variable to access the layout widgets in fragment
     lateinit var v: View
+
+    // Variables to access the widgets for choosing the mess
     lateinit var alacarte: RadioGroup
     lateinit var alacarte1: RadioButton
     lateinit var alacarte2: RadioButton
@@ -22,17 +25,26 @@ class Alacarte : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        // Assigning inflater to the view variable
         v = inflater.inflate(R.layout.fragment_alacarte, container, false)
+
+        // Referring the widgets
         alacarte = v.findViewById(R.id.alacarte)
         alacarte1 = v.findViewById(R.id.alacarte1)
         alacarte2 = v.findViewById(R.id.alacarte2)
 
+        // Perform action after a radio button is clicked
         alacarte.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
+
+            // Check the value of radio button clicked and perform the necessary action
             when(checkedId) {
                 R.id.apartments1 -> {  }
                 R.id.apartments2 -> {  }
             }
+
         })
+
         // Inflate the layout for this fragment
         return v
     }
