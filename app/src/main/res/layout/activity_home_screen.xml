@@ -11,146 +11,197 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="start"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="12dp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Select Room Type"/>
-
-    <!--Room Radio Group -->
-    <RadioGroup
-        android:id="@+id/roomType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/roomType1"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="4dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/radio_flat_selector"
-            android:button="@android:color/transparent"
-            android:textColor="@color/radio_flat_text_selector"
-            android:text="@string/apartment" />
+            android:layout_gravity="start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Select Room Type"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <RadioButton
-            android:id="@+id/roomType2"
-            android:layout_width="0dp"
+        <!--Room Radio Group -->
+        <RadioGroup
+            android:id="@+id/roomType"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="4dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/radio_flat_selector"
-            android:button="@android:color/transparent"
-            android:textColor="@color/radio_flat_text_selector"
-            android:text="@string/standardACRooms" />
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/roomType3"
-            android:layout_width="0dp"
+            <RadioButton
+                android:id="@+id/roomType1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/apartment"
+                android:textColor="@color/radio_flat_text_selector" />
+
+            <RadioButton
+                android:id="@+id/roomType2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/standardACRooms"
+                android:textColor="@color/radio_flat_text_selector" />
+
+            <RadioButton
+                android:id="@+id/roomType3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/standardNonACRooms"
+                android:textColor="@color/radio_flat_text_selector" />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/roomTypeFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="4dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/radio_flat_selector"
-            android:button="@android:color/transparent"
-            android:textColor="@color/radio_flat_text_selector"
-            android:text="@string/standardNonACRooms" />
-    </RadioGroup>
-    <FrameLayout
-        android:id="@+id/roomTypeFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:layout_gravity="start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Meal Options"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="start"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="12dp"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Meal Options"/>
-
-    <!--Meal Radio Group -->
-    <RadioGroup
-        android:id="@+id/mealType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/mealType1"
-            android:layout_width="0dp"
+        <!--Meal Radio Group -->
+        <RadioGroup
+            android:id="@+id/mealType"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="4dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/radio_flat_selector"
-            android:button="@android:color/transparent"
-            android:textColor="@color/radio_flat_text_selector"
-            android:text="@string/alacarte" />
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/mealType2"
-            android:layout_width="0dp"
+            <RadioButton
+                android:id="@+id/mealType1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/alacarte"
+                android:textColor="@color/radio_flat_text_selector" />
+
+            <RadioButton
+                android:id="@+id/mealType2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/standardMessFourMeals"
+                android:textColor="@color/radio_flat_text_selector" />
+
+            <RadioButton
+                android:id="@+id/mealType3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/standardMessTwoMeals"
+                android:textColor="@color/radio_flat_text_selector" />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/mealTypeFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="4dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/radio_flat_selector"
-            android:button="@android:color/transparent"
-            android:textColor="@color/radio_flat_text_selector"
-            android:text="@string/standardMessFourMeals" />
+            android:layout_gravity="start"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Other Facilities"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <RadioButton
-            android:id="@+id/mealType3"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="4dp"
-            android:layout_marginHorizontal="4dp"
-            android:background="@drawable/radio_flat_selector"
-            android:button="@android:color/transparent"
-            android:textColor="@color/radio_flat_text_selector"
-            android:text="@string/standardMessTwoMeals" />
-    </RadioGroup>
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
 
-    <FrameLayout
-        android:id="@+id/mealTypeFrameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/laundry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/laundry"
+                android:textColor="@color/radio_flat_text_selector" />
+
+            <CheckBox
+                android:id="@+id/gym"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_flat_selector"
+                android:button="@android:color/transparent"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="@string/gym"
+                android:textColor="@color/radio_flat_text_selector" />
+        </LinearLayout>
 
     </LinearLayout>
 

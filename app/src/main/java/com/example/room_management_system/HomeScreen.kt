@@ -2,6 +2,7 @@ package com.example.room_management_system
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.FragmentManager
@@ -96,4 +97,7 @@ class HomeScreen : AppCompatActivity() {
             i--
         }
     }
+
+    lateinit var gym: CheckBox
+    lateinit var laundry: CheckBox
 }

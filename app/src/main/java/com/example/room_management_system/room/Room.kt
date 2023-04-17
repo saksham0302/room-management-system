@@ -68,5 +68,6 @@ class Room : Fragment() {
         clickedSeat.isSelected = true
         clickedSeat.setImageResource(R.drawable.your_seat_img)
         selectedSeat = clickedSeat
+
     }
 }
