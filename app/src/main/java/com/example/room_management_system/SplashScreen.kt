@@ -20,7 +20,7 @@ class SplashScreen : AppCompatActivity() {
         // To delay the loading time
         Handler().postDelayed(
             {
-                val i = Intent(this, RoomReservation::class.java)
+                val i = Intent(this, LoginPage::class.java)
                 startActivity(i)
                 finish()
             }, 5000

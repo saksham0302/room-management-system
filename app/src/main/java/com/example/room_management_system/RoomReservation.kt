@@ -201,7 +201,7 @@ class RoomReservation : AppCompatActivity(), ShareDetails {
 
         gym.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener {buttonView, isChecked ->
             if (isChecked) {
-                assign.putString(gymFacility, "Gym")
+                assign.putString(gymFacility, "Opted")
                 assign.putFloat(gymFacilityCharges, 4000.00F)
                 assign.apply()
             }
@@ -209,7 +209,7 @@ class RoomReservation : AppCompatActivity(), ShareDetails {
 
         laundry.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener {buttonView, isChecked ->
             if (isChecked) {
-                assign.putString(laundryFacility, "Laundry")
+                assign.putString(laundryFacility, "Opted")
                 assign.putFloat(laundryFacilityCharges, 5000.00F)
                 assign.apply()
             }

@@ -9,4 +9,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange_red">#FF4500</color>
+    <color name="forest_green">#104210</color>
+    <color name="lime_green">#7a871e</color>
+    <color name="rose_red">#3b0918</color>
 </resources>

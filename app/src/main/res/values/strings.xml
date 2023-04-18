@@ -1,43 +1,21 @@
 <resources>
-    <string name="app_name">Room-Management-System</string>
+    <string name="app_name">Room Reservation System</string>
 
-    <string name="apartment"><font size="16"><b>Apartment Room (AC)</b></font>
-        <font size="12">\n\n\n(Apt-AC)(Attached Washroom)</font>
-        <font size="12">\n\nINR : 120000.00</font>
-    </string>
-    <string name="standardACRooms"><font size="16"><b>Standard Room (AC)</b></font>
-        <font size="12">\n\n\n(Std-AC)(Attached Washroom)</font>
-        <font size="12">\n\nINR : 105000.00</font>
-    </string>
-    <string name="standardNonACRooms"><font size="16"><b>Standard Room (Non-AC)</b></font>
-        <font size="12">\n\n\n(Std-NAC)(Attached Washroom)</font>
-        <font size="12">\n\nINR : 90000.00</font>
-    </string>
+    <string name="apartment"><font size="16"><b>Apartment Room (AC)</b></font><font size="12">\n\n\n(Apt-AC)(Attached Washroom)</font><font size="12">\n\nINR : 120000.00</font></string>
+    <string name="standardACRooms"><font size="16"><b>Standard Room (AC)</b></font><font size="12">\n\n\n(Std-AC)(Attached Washroom)</font><font size="12">\n\nINR : 105000.00</font></string>
+    <string name="standardNonACRooms"><font size="16"><b>Standard Room (Non-AC)</b></font><font size="12">\n\n\n(Std-NAC)(Attached Washroom)</font><font size="12">\n\nINR : 90000.00</font></string>
 
-    <string name="alacarte"><font size="16"><b>Alacarte\n\n</b></font>
-        <font size="12">\n(Choice Of Dishes)</font>
-        <font size="12">\n\n\nINR: 50000.00</font>
-    </string>
-    <string name="standardMessFourMeals"><font size="16"><b>Standard Mess Four Meals\n</b></font>
-        <font size="12">\n(Breakfast, Lunch, Tea Snacks &amp; Dinner)</font>
-        <font size="12">\nINR: 40000.00</font>
-    </string>
-    <string name="standardMessTwoMeals"><font size="16"><b>Standard Mess Two Meals\n</b></font>
-        <font size="12">\n(Breakfast &amp; Dinner)</font>
-        <font size="12">\n\n\nINR: 30000.00</font>
-    </string>
+    <string name="alacarte"><font size="16"><b>Alacarte\n\n</b></font><font size="12">\n(Choice Of Dishes)</font><font size="12">\n\n\nINR: 50000.00</font></string>
+    <string name="standardMessFourMeals"><font size="16"><b>Standard Mess Four Meals\n</b></font><font size="12">\n(Breakfast, Lunch, Tea Snacks &amp; Dinner)</font><font size="12">\nINR: 40000.00</font></string>
+    <string name="standardMessTwoMeals"><font size="16"><b>Standard Mess Two Meals\n</b></font><font size="12">\n(Breakfast &amp; Dinner)</font><font size="12">\n\n\nINR: 30000.00</font></string>
 
     <string name="combo"><b>Combo Menu</b>\n\n(North and South Mix)</string>
 
-    <string name="gym"><font size="16"><b>Gym\n</b></font>
-        <font size="12">\nINR: 4000.00</font>
-    </string>
-    <string name="laundry"><font size="16"><b>Laundry\n</b></font>
-        <font size="12">\nINR: 5000.00</font>
-    </string>
+    <string name="gym"><font size="16"><b>Gym\n</b></font><font size="12">\nINR: 4000.00</font></string>
+    <string name="laundry"><font size="16"><b>Laundry\n</b></font><font size="12">\nINR: 5000.00</font></string>
 
-    <string name="bookNow">
-        <font size="16"><b>Book Now</b></font>
-    </string>
+    <string name="bookNow"><font size="16"><b>Book Now</b></font></string>
+
+    <string name="facilityBooked"><b><i><u>Facilities Booked</u></i></b></string>
 
 </resources>
