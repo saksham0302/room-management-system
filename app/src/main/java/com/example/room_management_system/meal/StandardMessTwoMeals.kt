@@ -9,6 +9,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.FragmentManager
 import com.example.room_management_system.R
+import com.example.room_management_system.RoomReservation
 
 class StandardMessTwoMeals : Fragment() {
 
@@ -43,12 +44,17 @@ class StandardMessTwoMeals : Fragment() {
 
             mealsFragmentTransaction = mealsFragmentManager.beginTransaction()
 
+            // Send the standard two meals location to main
+            val mai = activity as RoomReservation
+
             // Check the value of radio button clicked and later redirect to the decided fragment
             when(checkedId) {
                 R.id.standardTwoMeals1 -> {
+                    mai.messLocation("Hostel Mess")
                     mealsFragmentTransaction.replace(R.id.messTwoMeals, Meal())
                 }
                 R.id.standardTwoMeals2 -> {
+                    mai.messLocation("Centralized Mess-2")
                     mealsFragmentTransaction.replace(R.id.messTwoMeals, Meal())
                 }
             }

@@ -202,6 +202,17 @@
                 android:textColor="@color/radio_flat_text_selector" />
         </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/custom_button"
+            android:paddingHorizontal="20dp"
+            android:text="@string/bookNow"
+            android:textColor="@color/orange" />
+
     </LinearLayout>
 
 </ScrollView>

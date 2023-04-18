@@ -9,6 +9,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.FragmentManager
 import com.example.room_management_system.R
+import com.example.room_management_system.RoomReservation
 import com.example.room_management_system.room.Room
 
 class Alacarte : Fragment() {
@@ -34,13 +35,16 @@ class Alacarte : Fragment() {
         alacarte1 = v.findViewById(R.id.alacarte1)
         alacarte2 = v.findViewById(R.id.alacarte2)
 
+        // Send the alacarte location to main
+        val mai = activity as RoomReservation
+
         // Perform action after a radio button is clicked
         alacarte.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener { group, checkedId ->
 
             // Check the value of radio button clicked and perform the necessary action
             when(checkedId) {
-                R.id.apartments1 -> {  }
-                R.id.apartments2 -> {  }
+                R.id.apartments1 -> { mai.messLocation("Apartment Mess") }
+                R.id.apartments2 -> { mai.messLocation("Centralized Mess-1") }
             }
 
         })

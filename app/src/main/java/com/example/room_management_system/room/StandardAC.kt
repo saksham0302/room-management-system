@@ -9,6 +9,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.FragmentManager
 import com.example.room_management_system.R
+import com.example.room_management_system.RoomReservation
 
 class StandardAC : Fragment() {
 
@@ -41,6 +42,7 @@ class StandardAC : Fragment() {
 
         // Fragment Manager to call the fragments
         val roomsFragmentManager: FragmentManager = childFragmentManager
+
         var roomsFragmentTransaction = roomsFragmentManager.beginTransaction()
         roomsFragmentTransaction.commit()
 
@@ -49,21 +51,29 @@ class StandardAC : Fragment() {
 
             roomsFragmentTransaction = roomsFragmentManager.beginTransaction()
 
+            // Send the standard ac rooms to main
+            val mai = activity as RoomReservation
+
             // Check the value of radio button clicked and later redirect to the decided fragment
             when(checkedId) {
                 R.id.standardAC1 -> {
+                    mai.roomType("BH 1")
                     roomsFragmentTransaction.replace(R.id.standardACRooms, Room())
                 }
                 R.id.standardAC2 -> {
+                    mai.roomType("BH 2")
                     roomsFragmentTransaction.replace(R.id.standardACRooms, Room())
                 }
                 R.id.standardAC3 -> {
+                    mai.roomType("BH 3")
                     roomsFragmentTransaction.replace(R.id.standardACRooms, Room())
                 }
                 R.id.standardAC4 -> {
+                    mai.roomType("BH 4")
                     roomsFragmentTransaction.replace(R.id.standardACRooms, Room())
                 }
                 R.id.standardAC5 -> {
+                    mai.roomType("BH 5")
                     roomsFragmentTransaction.replace(R.id.standardACRooms, Room())
                 }
             }

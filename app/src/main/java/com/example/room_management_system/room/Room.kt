@@ -1,6 +1,7 @@
 package com.example.room_management_system.room
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.ImageView
 import com.example.room_management_system.R
+import com.example.room_management_system.RoomReservation
+import com.example.room_management_system.ShareDetails
 
 class Room : Fragment() {
 
@@ -32,7 +35,7 @@ class Room : Fragment() {
     // Variable to assign images to the attributes of grid layout
     private var selectedSeat: ImageView? = null
     // Assigning the booked Seats manually
-    val bookedSeats = mutableSetOf("A1", "B3", "C4")
+    val bookedSeats = mutableSetOf("1 1", "2 3", "4 4")
 
     private fun createSeats() {
 
@@ -56,7 +59,7 @@ class Room : Fragment() {
                 }
 
                 // Assign the tag to each attribute
-                val seatNumber = "${('A' + row)}${col + 1}"
+                val seatNumber = "${('1' + row)} ${col + 1}"
                 seat.tag = seatNumber
 
                 if (bookedSeats.contains(seatNumber)) {
@@ -65,9 +68,10 @@ class Room : Fragment() {
                     seat.setImageResource(R.drawable.available_img)
                 }
 
-                seat.setOnClickListener { onSeatSelected(it) }
+                seat.setOnClickListener {
+                    onSeatSelected(it)
+                }
                 gridLayout.addView(seat)
-
             }
         }
     }
@@ -82,16 +86,20 @@ class Room : Fragment() {
             return
         }
 
-        if (selectedSeat != null && selectedSeat != clickedSeat) {
+        else if (selectedSeat != null && selectedSeat != clickedSeat) {
             // Deselect the previously selected seat
             selectedSeat?.isSelected = false
             selectedSeat?.setImageResource(R.drawable.available_img)
         }
 
-        // Select the clicked seat
-        clickedSeat.isSelected = true
-        clickedSeat.setImageResource(R.drawable.your_seat_img)
-        selectedSeat = clickedSeat
+            // Select the clicked seat
+            clickedSeat.isSelected = true
+            clickedSeat.setImageResource(R.drawable.your_seat_img)
+            selectedSeat = clickedSeat
 
+            // Send room no to main activity
+            val mai = activity as RoomReservation
+            val arr = seatNumber.split("\\s".toRegex()).toTypedArray()
+            mai.room(arr[0], arr[1])
     }
 }

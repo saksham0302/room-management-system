@@ -1,6 +1,7 @@
 package com.example.room_management_system.room
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.fragment.app.FragmentManager
 import com.example.room_management_system.R
+import com.example.room_management_system.RoomReservation
 
 class Apartment : Fragment() {
 
@@ -43,12 +45,17 @@ class Apartment : Fragment() {
 
             roomsFragmentTransaction = roomsFragmentManager.beginTransaction()
 
+            // send apartment rooms to main
+            val mai = activity as RoomReservation
+
             // Check the value of radio button clicked and later redirect to the decided fragment
             when(checkedId) {
                 R.id.apartments1 -> {
+                    mai.roomType("Student Apartment A")
                     roomsFragmentTransaction.replace(R.id.apartmentRooms, Room())
                 }
                 R.id.apartments2 -> {
+                    mai.roomType("Student Apartment B")
                     roomsFragmentTransaction.replace(R.id.apartmentRooms, Room())
                 }
             }
